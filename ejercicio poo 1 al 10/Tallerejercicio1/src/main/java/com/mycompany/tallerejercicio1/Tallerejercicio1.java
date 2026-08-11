@@ -15,10 +15,13 @@ public class Tallerejercicio1 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        //definition of the variable type
         int op=0;
         int index=0;
+        //create list
         ArrayList<clase> Listclase=new ArrayList<>();
         do{
+        //take action
         System.out.println("digite que quiere hacer");
         System.out.println("1.registrar libros");
         System.out.println("2.mostrar libros");
@@ -27,6 +30,7 @@ public class Tallerejercicio1 {
         sc.nextLine();
         switch (op) {
             case 1:
+                //add to the list
                 clase clase=new clase();
                 System.out.println("registre la informacion");
                 System.out.println("titulo: ");
@@ -38,6 +42,7 @@ public class Tallerejercicio1 {
                 Listclase.add(clase);              
                 break;
             case 2:
+                //show list
                 for (int i = 0; i < Listclase.size(); i++) {
                     Listclase.get(i).getdata();                  
                 }

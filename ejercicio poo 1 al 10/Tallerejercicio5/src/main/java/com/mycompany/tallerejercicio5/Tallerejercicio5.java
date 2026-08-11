@@ -15,9 +15,12 @@ public class Tallerejercicio5 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        //definition of the variable type
         int op=0,id=0,d=0,kilometros;
+        //create list
         ArrayList<Datos>ListDatos=new ArrayList<>();
         do {
+            //take action
             System.out.println("digite accion");
             System.out.println("1.registrar carro");
             System.out.println("2.registrar recorrido del carro en km ");
@@ -27,6 +30,7 @@ public class Tallerejercicio5 {
             sc.nextLine();
             switch (op) {
                 case 1:
+                    //add of the list
                     Datos carro =new Datos();
                     System.out.println("registre el carro");
                     System.out.println("placa: ");
@@ -44,6 +48,7 @@ public class Tallerejercicio5 {
                     ListDatos.add(carro);
                     break;
                 case 2:
+                    //search the list
                     System.out.println("digite la placa del carro");
                     id=sc.nextInt();
                     System.out.println("digite cantidad de ckm recorrido");
@@ -58,6 +63,7 @@ public class Tallerejercicio5 {
                     }
                     break;
                 case 3:
+                    //show list
                     for (int i = 0; i < ListDatos.size(); i++) {
                         ListDatos.get(i).getdata();
                     }                  

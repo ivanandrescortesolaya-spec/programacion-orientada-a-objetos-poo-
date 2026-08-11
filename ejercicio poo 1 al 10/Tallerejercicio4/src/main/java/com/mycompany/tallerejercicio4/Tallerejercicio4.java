@@ -15,11 +15,14 @@ public class Tallerejercicio4 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        //definition of the variable type
         int op=0;
         int id=0;
         int dp=0,rt=0;
+        //create list
         ArrayList<Datos>ListDatos=new ArrayList<>();
         do {
+            //take action
             System.out.println("digite accion");
             System.out.println("1.registrar");
             System.out.println("2.depositar");
@@ -30,6 +33,7 @@ public class Tallerejercicio4 {
             sc.nextLine();
             switch (op) {
                 case 1:
+                    //add of the list
                     Datos datos =new Datos();
                     System.out.println("registrar cuenta");
                     System.out.println("digite numero de cuenta: ");
@@ -42,6 +46,8 @@ public class Tallerejercicio4 {
                     ListDatos.add(datos);
                     break;
                 case 2:
+                    
+                    //account balance update
                     System.out.println("digite id de cuenta a depositar: ");
                     id=sc.nextInt();
                     sc.nextLine();
@@ -58,6 +64,7 @@ public class Tallerejercicio4 {
                     sc.nextLine();
                     break;
                 case 3:
+                    //withdraw the account balance
                     System.out.println("digite id de cuenta a retirar: ");
                     id=sc.nextInt();
                     sc.nextLine();
@@ -72,6 +79,7 @@ public class Tallerejercicio4 {
                     }
                     break;
                 case 4:
+                    //show list
                     for (int i = 0; i < ListDatos.size(); i++) {
                         ListDatos.get(i).getdata();
                     }

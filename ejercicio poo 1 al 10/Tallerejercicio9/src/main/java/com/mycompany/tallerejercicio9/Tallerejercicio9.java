@@ -15,9 +15,12 @@ public class Tallerejercicio9 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner (System.in);
+        //defintion of the variable type
         int op=0;
+        //create list
         ArrayList<Datos>ListDatos=new ArrayList<>();
         do {
+            //take action
             System.out.println("digite accion");
             System.out.println("1.registrar");
             System.out.println("2.mostrar informacion");
@@ -26,6 +29,7 @@ public class Tallerejercicio9 {
             sc.nextLine();
             switch (op) {
                 case 1:
+                    //add of the list
                     Datos estudiante=new Datos();
                     System.out.println("digite nombre del estudiante: ");
                     estudiante.nombre=sc.nextLine();
@@ -39,6 +43,7 @@ public class Tallerejercicio9 {
                     ListDatos.add(estudiante);
                     break;
                 case 2:
+                    //show list
                     for (int i = 0; i < ListDatos.size(); i++) {
                         ListDatos.get(i).estudiante();
                     }

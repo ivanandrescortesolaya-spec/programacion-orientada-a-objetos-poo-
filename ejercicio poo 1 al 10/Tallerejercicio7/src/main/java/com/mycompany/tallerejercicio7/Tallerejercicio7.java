@@ -15,10 +15,13 @@ public class Tallerejercicio7 {
 
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
+        //dafinition of the variable type
         int op=0,id=0;
         String consulta;
+        //create list
         ArrayList<Datos>ListDatos=new ArrayList<>();
         do {
+            //take list
             System.out.println("digite accion");
             System.out.println("1.registrar mascota");
             System.out.println("2.mostrar cuantas consultas hechas hoy");
@@ -28,6 +31,7 @@ public class Tallerejercicio7 {
             sc.nextLine();
             switch (op) {
                 case 1:
+                    //add of the list
                     Datos mascota=new Datos();
                     sc.nextLine();
                     System.out.println("digite nombre");
@@ -50,10 +54,12 @@ public class Tallerejercicio7 {
                     ListDatos.add(mascota);
                     break;
                 case 2:
+                    //show total number of citations
                         System.out.println("el total de consultas de la mascota: "+ListDatos.get(0).consultas);   
                        
                     break;
                 case 3:
+                    //show list
                         for (int i = 0; i < ListDatos.size(); i++) {
                         ListDatos.get(i).getdata();
                     }

@@ -13,6 +13,7 @@ public class clase {
     String autor; 
     int npáginas;
     public void getdata(){
+        //obtain data
         System.out.println("la informacion del libro es: ");
         System.out.println("titulo: "+this.título+" autor "+this.autor+" No paginas "+this.npáginas);
     }

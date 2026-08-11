@@ -14,11 +14,14 @@ import java.util.Scanner;
 public class Tallerejercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //create list
         ArrayList<Cliente> ListClientes = new ArrayList<>();
+        //definition of the variable type
         int op,id,numero,cantidad;
         String nombre,correo,fecha,nombreproducto;
         double precio;
         do {
+            //take action
             System.out.println("digite accion");
             System.out.println("1.registrar");
             System.out.println("2.mostrar");
@@ -27,6 +30,7 @@ public class Tallerejercicio10 {
             sc.nextLine();
             switch (op) {
                 case 1:
+                    //add to the list
                     Cliente cliente = new Cliente();
                     System.out.println("nombre: ");
                     nombre = sc.nextLine();
@@ -53,6 +57,7 @@ public class Tallerejercicio10 {
                     ListClientes.add(cliente);
                     break;
                 case 2:
+                    //show list
                     if (ListClientes.isEmpty()) {
                         System.out.println("no hay compras registradas.");
                     } else {

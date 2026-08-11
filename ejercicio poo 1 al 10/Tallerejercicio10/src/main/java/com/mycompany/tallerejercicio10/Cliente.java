@@ -13,8 +13,7 @@ public class Cliente {
     String correo;
     int id;
     Compra compra = new Compra();
-    public Cliente() {
-    }
+    
 
     public void registrar(String nombre, String correo, int id) {
         this.nombre = nombre;
