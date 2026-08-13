@@ -31,16 +31,16 @@ public class Tallerejercicio3 {
             sc.nextLine();
              switch (op) {
                  case 1:
-                     //add of the list
-                     Datos material=new Datos(); 
+                     //add of the list                    
                      System.out.println("registrar en el inventario ");
                      System.out.println("nombre ");
-                     material.nombre=sc.nextLine();
+                     String nombre=sc.nextLine();
                      System.out.println("precio");
-                     material.precio=sc.nextInt();
+                     int precio=sc.nextInt();
                      System.out.println("cantidad ");
-                     material.cantidad=sc.nextInt();
-                     ListDatos.add(material);
+                     int cantidad=sc.nextInt();
+                     Datos inventario=new Datos(nombre, precio, cantidad); 
+                     ListDatos.add(inventario);
                      break;
                  case 2:
                      //show list

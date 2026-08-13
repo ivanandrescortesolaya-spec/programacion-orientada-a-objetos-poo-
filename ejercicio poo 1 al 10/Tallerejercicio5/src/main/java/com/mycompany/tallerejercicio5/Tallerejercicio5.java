@@ -31,20 +31,20 @@ public class Tallerejercicio5 {
             switch (op) {
                 case 1:
                     //add of the list
-                    Datos carro =new Datos();
                     System.out.println("registre el carro");
                     System.out.println("placa: ");
-                    carro.placa=sc.nextInt();
+                    int placa=sc.nextInt();
                     sc.nextLine();
                     System.out.println("marca: ");
-                    carro.marca=sc.nextLine();
+                    String marca=sc.nextLine();
                     System.out.println("modelo: ");
-                    carro.modelo=sc.nextLine();
+                    String modelo=sc.nextLine();
                     System.out.println("cantidad de combustible: ");
-                    carro.concombustible=sc.nextInt();
+                    int concombustible=sc.nextInt();
                     sc.nextLine();
                     System.out.println("digite como se encuentra el carro on o off ");
-                    carro.on=sc.nextLine();
+                    String on=sc.nextLine();
+                    Datos carro =new Datos(placa,marca,modelo,concombustible,on);
                     ListDatos.add(carro);
                     break;
                 case 2:

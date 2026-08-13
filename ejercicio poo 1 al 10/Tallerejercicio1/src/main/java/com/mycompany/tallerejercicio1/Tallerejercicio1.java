@@ -31,14 +31,14 @@ public class Tallerejercicio1 {
         switch (op) {
             case 1:
                 //add to the list
-                clase clase=new clase();
                 System.out.println("registre la informacion");
                 System.out.println("titulo: ");
-                clase.título=sc.nextLine();
+                String titulo=sc.nextLine();
                 System.out.println("autor: ");
-                clase.autor=sc.nextLine();
+                String autor=sc.nextLine();
                 System.out.println("No de paginas: ");
-                clase.npáginas=sc.nextInt();
+                int npaginas=sc.nextInt();
+                clase clase=new clase(titulo,autor,npaginas);
                 Listclase.add(clase);              
                 break;
             case 2:

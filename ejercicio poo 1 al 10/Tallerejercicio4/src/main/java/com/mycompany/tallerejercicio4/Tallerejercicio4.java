@@ -33,17 +33,17 @@ public class Tallerejercicio4 {
             sc.nextLine();
             switch (op) {
                 case 1:
-                    //add of the list
-                    Datos datos =new Datos();
+                    //add of the list             
                     System.out.println("registrar cuenta");
                     System.out.println("digite numero de cuenta: ");
-                    datos.nocuenta=sc.nextInt();
+                    int nocuenta=sc.nextInt();
                     sc.nextLine();
                     System.out.println("digite nombre del titular: ");
-                    datos.nomtitular=sc.nextLine();
+                    String nomtitular=sc.nextLine();
                     System.out.println("digite saldo de la cuenta: ");
-                    datos.saldo=sc.nextInt();
-                    ListDatos.add(datos);
+                    int saldo=sc.nextInt();
+                    Datos cuenta =new Datos(nocuenta,nomtitular,saldo);
+                    ListDatos.add(cuenta);
                     break;
                 case 2:
                     
@@ -61,7 +61,6 @@ public class Tallerejercicio4 {
                             break;
                         }    
                     }
-                    sc.nextLine();
                     break;
                 case 3:
                     //withdraw the account balance
@@ -71,11 +70,25 @@ public class Tallerejercicio4 {
                     System.out.println("digite cantidad a retirar: ");
                     rt=sc.nextInt();
                     for (int i = 0; i < ListDatos.size(); i++) {
-                        if (ListDatos.get(i).nocuenta==id) {
-                           ListDatos.get(i).saldo-=rt;    
+
+                        if (ListDatos.get(i).nocuenta == id) {
+
+                            if (rt > ListDatos.get(i).saldo) {
+
+                                System.out.println("Saldo insuficiente.");
+
+                            } else {
+
+                                ListDatos.get(i).saldo -= rt;
+
+                                System.out.println("Retiro realizado: " + rt);
+
+                                System.out.println("Nuevo saldo: "
+                                        + ListDatos.get(i).saldo);
+                            }
+
+                            break;
                         }
-                        System.out.println("el retiro realizado es de: "+rt);
-                        System.out.println("el nuevo saldo de la cuenta es: "+ListDatos.get(i).saldo);
                     }
                     break;
                 case 4:
@@ -84,8 +97,7 @@ public class Tallerejercicio4 {
                         ListDatos.get(i).getdata();
                     }
                     break;
-                default:
-                    
+                default:                  
             }
         } while (op!=5);
     }

@@ -14,43 +14,75 @@ import java.util.Scanner;
 public class Tallerejercicio2 {
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        //definition of the variable type
-        int op=0;
-        int id=0;
-        //create list
-        ArrayList<Datos>ListDatos=new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+        int op = 0;
+
+        ArrayList<Datos> listaDatos = new ArrayList<>();
+
         do {
-            //take action
-            System.out.println("elegir accion ");
-            System.out.println("1.registrar estudiante");
-            System.out.println("2.mostrar informacion");
-            System.out.println("3.salir");
-            op=sc.nextInt();
+
+            System.out.println("\nSeleccione una opción:");
+            System.out.println("1. Registrar estudiante");
+            System.out.println("2. Mostrar información");
+            System.out.println("3. Salir");
+
+            op = sc.nextInt();
             sc.nextLine();
+
             switch (op) {
+
                 case 1:
-                    //add to the list
-                    Datos estudiante =new Datos();
-                    System.out.println("digite la informacion ");
-                    System.out.println("Nombre: ");
-                    estudiante.nombre=sc.nextLine();
-                    System.out.println("edad: ");
-                    estudiante.edad=sc.nextLine();
-                    System.out.println("grado ");
-                    estudiante.grado=sc.nextInt();
-                    ListDatos.add(estudiante);
+
+                    System.out.println("\nDigite la información del estudiante");
+
+                    System.out.print("Nombre: ");
+                    String nombre = sc.nextLine();
+
+                    System.out.print("Edad: ");
+                    int edad = sc.nextInt();
+
+                    System.out.print("Grado: ");
+                    int grado = sc.nextInt();
+                    sc.nextLine();
+
+                    Datos estudiante = new Datos(nombre, edad, grado);
+
+                    listaDatos.add(estudiante);
+
+                    System.out.println("Estudiante registrado correctamente.");
+
                     break;
+
                 case 2:
-                    //show list
-                    for (int i = 0; i < ListDatos.size(); i++) {
-                        ListDatos.get(id).getdata();
+
+                    if (listaDatos.isEmpty()) {
+
+                        System.out.println("No hay estudiantes registrados.");
+
+                    } else {
+
+                        for (int i = 0; i < listaDatos.size(); i++) {
+                            listaDatos.get(i).getdata();
+                        }
                     }
+
                     break;
+
+                case 3:
+
+                    System.out.println("Programa finalizado.");
+
+                    break;
+
                 default:
-                    
+
+                    System.out.println("Opción no válida.");
             }
-        } while (op!=3);
+
+        } while (op != 3);
+
+        sc.close();
     }
 }
 /*Ejercicio 2. Estudiante (Constructor) 

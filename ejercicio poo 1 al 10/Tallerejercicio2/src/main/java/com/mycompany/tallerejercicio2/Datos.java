@@ -9,9 +9,16 @@ package com.mycompany.tallerejercicio2;
  * @author Ivan Andres
  */
 public class Datos {
+
     String nombre;
-    String edad;
+    int edad;
     int grado;
+    
+public Datos(String nombre, int edad, int grado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.grado = grado;
+    }
 
 public void getdata(){
     System.out.println("la informacion del estudiante es: ");

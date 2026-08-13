@@ -9,9 +9,16 @@ package com.mycompany.tallerejercicio1;
  * @author Ivan Andres
  */
 public class clase {
+
+    
     String título;
     String autor; 
     int npáginas;
+    public clase(String título, String autor, int npáginas) {
+        this.título = título;
+        this.autor = autor;
+        this.npáginas = npáginas;
+    }
     public void getdata(){
         //obtain data
         System.out.println("la informacion del libro es: ");

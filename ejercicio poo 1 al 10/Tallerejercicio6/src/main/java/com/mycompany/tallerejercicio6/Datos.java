@@ -9,12 +9,22 @@ package com.mycompany.tallerejercicio6;
  * @author Ivan Andres
  */
 public class Datos {
+
+    
     String nombre;
     String cargo;
     int salario;
     int horasex; 
     int salariofn;
     int precioxhr;
+    public Datos(String nombre, String cargo, int salario, int horasex, int salariofn, int precioxhr) {
+        this.nombre = nombre;
+        this.cargo = cargo;
+        this.salario = salario;
+        this.horasex = horasex;
+        this.salariofn = salariofn;
+        this.precioxhr = precioxhr;
+    }
     public void getdata(){
         System.out.println("la informacion del empledo es: ");
         System.out.println("el nombre es: "+this.nombre+" cargo: "+this.cargo+" salario: "+this.salario+" horas trabajadas en el mes: "+this.horasex+" el salario final es: "+this.salariofn);

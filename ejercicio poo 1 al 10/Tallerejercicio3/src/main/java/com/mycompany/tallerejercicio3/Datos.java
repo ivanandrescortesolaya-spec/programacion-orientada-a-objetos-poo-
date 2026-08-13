@@ -9,6 +9,12 @@ package com.mycompany.tallerejercicio3;
  * @author Ivan Andres
  */
 public class Datos {
+
+    public Datos(String nombre, int precio, int cantidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
     String nombre; 
     int precio;
     int cantidad;

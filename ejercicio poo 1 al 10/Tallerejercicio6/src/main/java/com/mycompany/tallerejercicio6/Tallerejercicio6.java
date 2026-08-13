@@ -31,18 +31,19 @@ public class Tallerejercicio6 {
             switch (op) {
                 case 1:
                     //add of the list
-                    Datos empleado =new Datos();
+                    
                     System.out.println("digite nombre del empleado ");
-                    empleado.nombre=sc.nextLine();
+                    String nombre=sc.nextLine();
                     System.out.println("digite cargo ");
-                    empleado.cargo=sc.nextLine();
+                    String cargo=sc.nextLine();
                     System.out.println("digie salario base ");
-                    empleado.salario=sc.nextInt();
+                    int salario=sc.nextInt();
                     System.out.println("digite las horas extras del mes ");
-                    empleado.horasex=sc.nextInt();
+                    int horasex=sc.nextInt();
                     System.out.println("digite precio por hora extra ");
-                    empleado.precioxhr=sc.nextInt();
-                    empleado.salariofn=(empleado.horasex*empleado.precioxhr)+empleado.salario;                               
+                    int precioxhr=sc.nextInt();
+                    int salariofn=(horasex*precioxhr)+salario;
+                    Datos empleado =new Datos(nombre,cargo,salario,horasex,precioxhr,salariofn);
                     ListDatos.add(empleado);
                     break;
                 case 2:
