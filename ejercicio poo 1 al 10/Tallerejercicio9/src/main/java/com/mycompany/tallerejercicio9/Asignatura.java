@@ -9,10 +9,14 @@ package com.mycompany.tallerejercicio9;
  * @author Ivan Andres
  */
 public class Asignatura {
-    String nombre;
+    String nombre2;
     double credito;
-    public void asignatura(){
+    public Asignatura(String nombre2, double credito) {
+        this.nombre2 = nombre2;
+        this.credito = credito;
+    }
+    public void mostrarasignatura(){
         System.out.println("la informacion de la asignatura es: ");
-        System.out.println("nombre: "+nombre+" credito: "+credito);
+        System.out.println("nombre: "+nombre2+" credito: "+credito);
     }
 }

@@ -12,18 +12,20 @@ public class Cliente {
     String nombre;
     String correo;
     int id;
-    Compra compra = new Compra();
-    
-
-    public void registrar(String nombre, String correo, int id) {
+    Compra compra;
+    Producto producto;
+     public Cliente(String nombre, String correo, int id,Compra compra,Producto producto) {
         this.nombre = nombre;
         this.correo = correo;
         this.id = id;
+        this.compra=compra;
+        this.producto=producto;
     }
-
-    public void mostrar() {
+    public void mostrarcliente() {
         System.out.println("informacion de cliente: ");
         System.out.println("nombre: " + nombre+" correo: " + correo+" identificacion: " + id);
-        compra.mostrar();
+        compra.mostrarcompra();
+        producto.mostrarproducto();
+        
     }
 }

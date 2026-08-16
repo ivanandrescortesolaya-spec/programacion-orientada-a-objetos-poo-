@@ -11,6 +11,10 @@ package com.mycompany.tallerejercicio8;
 public class Plato {
     String nombre;
     double precio;
+    public Plato(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
     public void mostrarplato(){
         System.out.println("plato: "+nombre+" precio: "+precio);
     }

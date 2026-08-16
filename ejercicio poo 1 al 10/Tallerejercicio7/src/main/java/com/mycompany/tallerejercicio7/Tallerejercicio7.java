@@ -17,7 +17,7 @@ public class Tallerejercicio7 {
         Scanner sc =new Scanner(System.in);
         //dafinition of the variable type
         int op=0,id=0;
-        String consulta;
+        int consulta=0;
         //create list
         ArrayList<Datos>ListDatos=new ArrayList<>();
         do {
@@ -32,25 +32,27 @@ public class Tallerejercicio7 {
             switch (op) {
                 case 1:
                     //add of the list
-                    Datos mascota=new Datos();
                     sc.nextLine();
                     System.out.println("digite nombre");
-                    mascota.nombre=sc.nextLine();   
+                    String nombre=sc.nextLine();   
                     System.out.println("digite especie");
-                    mascota.especie=sc.nextLine();
+                    String especie=sc.nextLine();
+                    int edad;
                     do {
                     System.out.println("digite edad");
-                    mascota.edad=sc.nextInt();
-                    } while (mascota.edad<0);
+                    edad=sc.nextInt();
+                    } while (edad<0);
+                    int peso;
                     do {
                     System.out.println("digite peso");
-                    mascota.peso=sc.nextInt();  
-                    } while (mascota.peso<0);   
+                    peso=sc.nextInt();  
+                    } while (peso<0);   
                     sc.nextLine();
                     System.out.println("digite el nombre del propetario");
-                    mascota.nombrepp=sc.nextLine();  
+                    String nombrepp=sc.nextLine();  
                     System.out.println("consulta registrada ");
-                    mascota.consultas++;
+                    consulta++;
+                    Datos mascota=new Datos(nombre,especie,edad,peso,nombrepp);
                     ListDatos.add(mascota);
                     break;
                 case 2:

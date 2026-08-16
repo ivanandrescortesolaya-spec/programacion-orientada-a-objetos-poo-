@@ -9,20 +9,19 @@ package com.mycompany.tallerejercicio10;
  * @author Ivan Andres
  */
 public class Producto {
-      String nombre;
+      String nombre2;
     double precio;
     int cantidad;
-
-    public void registrar(String nombre, double precio, int cantidad) {
-        this.nombre = nombre;
+    public Producto(String nombre2, double precio, int cantidad) {
+        this.nombre2 = nombre2;
         this.precio = precio;
         this.cantidad = cantidad;
     }
     public double calcularSubtotal() {
         return precio * cantidad;
     }
-    public void mostrar() {
+    public void mostrarproducto() {
         System.out.println("informacion de producto");
-        System.out.println("nombre: " + nombre+" precio: " + precio+" cantidad: " + cantidad+" subtotal: $" + calcularSubtotal());
+        System.out.println("nombre: " + nombre2+" precio: " + precio+" cantidad: " + cantidad+" subtotal: $" + calcularSubtotal());
     }
 }

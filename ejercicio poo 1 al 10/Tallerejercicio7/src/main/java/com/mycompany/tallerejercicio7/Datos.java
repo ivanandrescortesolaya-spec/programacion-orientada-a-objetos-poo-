@@ -15,6 +15,13 @@ public class Datos {
     double peso;
     String nombrepp;
     int consultas=0;
+    public Datos(String nombre, String especie, int edad, double peso, String nombrepp) {
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.peso = peso;
+        this.nombrepp = nombrepp;
+    }
     public void getdata(){
         System.out.println("nombre: "+this.nombre+" especie: "+this.especie+" edad:"+this.edad+" peso: "+this.peso+" nombre del propetario: "+this.nombrepp+" cuantas consultas lleva: "+this.consultas);
     }

@@ -11,23 +11,12 @@ package com.mycompany.tallerejercicio10;
 public class Compra {
     int numero;
     String fecha;
-
-    Producto producto = new Producto();
-
-    public void registrar(int numero, String fecha) {
+    public Compra(int numero, String fecha) {
         this.numero = numero;
         this.fecha = fecha;
-    }
-
-    public double calcularTotal() {
-        return producto.calcularSubtotal();
-    }
-
-    public void mostrar() {
-
+    }    
+    public void mostrarcompra() {
         System.out.println("informacion compra");
         System.out.println("numero: " + numero+" fecha: "+fecha);
-        producto.mostrar();
-        System.out.println("total a pagar: " + calcularTotal());
     }
 }

@@ -29,17 +29,18 @@ public class Tallerejercicio9 {
             sc.nextLine();
             switch (op) {
                 case 1:
-                    //add of the list
-                    Datos estudiante=new Datos();
+                    //add of the list                   
                     System.out.println("digite nombre del estudiante: ");
-                    estudiante.nombre=sc.nextLine();
+                    String nombre=sc.nextLine();
                     System.out.println("digite codigo del estudiante: ");
-                    estudiante.codigo=sc.nextInt();
+                    int codigo=sc.nextInt();
                     sc.nextLine();
                     System.out.println("digite nombre de la asignatura: ");
-                    estudiante.asignatura.nombre=sc.nextLine();
+                    String nombre2=sc.nextLine();
                     System.out.println("digite cantidad de creditos: ");
-                    estudiante.asignatura.credito=sc.nextInt();
+                    int credito=sc.nextInt();
+                    Asignatura asignatura=new Asignatura(nombre2,credito);
+                    Datos estudiante=new Datos(nombre,codigo,asignatura);
                     ListDatos.add(estudiante);
                     break;
                 case 2:

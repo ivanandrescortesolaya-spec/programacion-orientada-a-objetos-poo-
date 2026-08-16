@@ -17,9 +17,7 @@ public class Tallerejercicio10 {
         //create list
         ArrayList<Cliente> ListClientes = new ArrayList<>();
         //definition of the variable type
-        int op,id,numero,cantidad;
-        String nombre,correo,fecha,nombreproducto;
-        double precio;
+        int op;
         do {
             //take action
             System.out.println("digite accion");
@@ -31,29 +29,28 @@ public class Tallerejercicio10 {
             switch (op) {
                 case 1:
                     //add to the list
-                    Cliente cliente = new Cliente();
                     System.out.println("nombre: ");
-                    nombre = sc.nextLine();
+                    String nombre = sc.nextLine();
                     System.out.println("correo: ");
-                    correo = sc.nextLine();
+                    String correo = sc.nextLine();
                     System.out.println("identificacion: ");
-                    id = sc.nextInt();
+                    int id = sc.nextInt();
                     sc.nextLine();
-                    cliente.registrar(nombre, correo, id);
                     System.out.println("numero de compra: ");
-                    numero = sc.nextInt();
+                    int numero = sc.nextInt();
                     sc.nextLine();
                     System.out.println("fecha: ");
-                    fecha = sc.nextLine();
-                    cliente.compra.registrar(numero, fecha);
+                    String fecha = sc.nextLine();
                     System.out.println("nombre del producto: ");
-                    String nombreProducto = sc.nextLine();
+                    String nombre2 = sc.nextLine();
                     System.out.println("precio: ");
-                    precio = sc.nextDouble();
+                    double precio = sc.nextDouble();
                     System.out.println("cantidad: ");
-                    cantidad = sc.nextInt();
+                    int cantidad = sc.nextInt();
                     sc.nextLine();
-                    cliente.compra.producto.registrar(nombreProducto, precio, cantidad);
+                    Compra compra=new Compra(numero,fecha);
+                    Producto producto=new Producto(nombre2,precio,cantidad);
+                    Cliente cliente = new Cliente(nombre,correo,id,compra,producto);
                     ListClientes.add(cliente);
                     break;
                 case 2:
@@ -62,7 +59,7 @@ public class Tallerejercicio10 {
                         System.out.println("no hay compras registradas.");
                     } else {
                         for (int i = 0; i < ListClientes.size(); i++) {                      
-                            ListClientes.get(i).mostrar();
+                            ListClientes.get(i).mostrarcliente();
                         }
                     }
                     break;

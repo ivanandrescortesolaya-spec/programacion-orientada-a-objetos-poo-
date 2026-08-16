@@ -12,11 +12,19 @@ public class Datos {
     int numero;
     String fecha;
     String cliente;
-    Plato plato=new Plato();
+    Plato plato;
+    public Datos(int numero, String fecha, String cliente,Plato plato) {
+        this.numero = numero;
+        this.fecha = fecha;
+        this.cliente = cliente;
+        this.plato=plato;
+    }
+    
     public void pedido(){
         System.out.println("informacion de pedido");
         System.out.println("numero: "+numero+" fecha: "+fecha+" cliente: "+cliente);
         plato.mostrarplato();
+        
     }
 }
 /*Ejercicio 8. Restaurante (Dos clases relacionadas) 

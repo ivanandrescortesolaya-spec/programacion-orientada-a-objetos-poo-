@@ -11,10 +11,15 @@ package com.mycompany.tallerejercicio9;
 public class Datos {
     String nombre;
     int codigo;
-    Asignatura asignatura=new Asignatura();
+    Asignatura asignatura;
+    public Datos(String nombre, int codigo,Asignatura asignatura) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.asignatura=asignatura;
+    }
     public void estudiante(){
         System.out.println("la informacion del estudiantte es: ");
         System.out.println("nombre: "+nombre+" codigo: "+codigo);
-        asignatura.asignatura();
+       asignatura.mostrarasignatura();
     }
 }

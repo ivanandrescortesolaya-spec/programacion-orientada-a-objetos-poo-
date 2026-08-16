@@ -30,18 +30,19 @@ public class Tallerejercicio8 {
             switch (op) {
                 case 1:
                     //add of the list
-                    Datos pedido=new Datos();
                     System.out.println("digite numero de pedido");
-                    pedido.numero=sc.nextInt();
+                    int numero=sc.nextInt();
                     sc.nextLine();
                     System.out.println("digite fecha del pedido");
-                    pedido.fecha=sc.nextLine();
+                    String fecha=sc.nextLine();
                     System.out.println("digite nombre del cliente");
-                    pedido.cliente=sc.nextLine();
+                    String cliente=sc.nextLine();
                     System.out.println("digite nombre del plato");
-                    pedido.plato.nombre=sc.nextLine();
+                    String nombre=sc.nextLine();
                     System.out.println("digite precio");
-                    pedido.plato.precio=sc.nextDouble();
+                    Double precio=sc.nextDouble();
+                    Plato plato=new Plato(nombre,precio);
+                    Datos pedido=new Datos(numero,fecha,cliente,plato);
                     ListDatos.add(pedido);
                     break;
                 case 2:
